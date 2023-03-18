@@ -1,10 +1,10 @@
 type GreetProps = {
   name: string;
-  messageCount: number;
+  messageCount?: number;
   isLogged: boolean;
 };
 
-const Greet = ({ name, messageCount, isLogged }: GreetProps) => {
+const Greet = ({ name, messageCount = 0, isLogged }: GreetProps) => {
   return (
     <div>
       <h2>

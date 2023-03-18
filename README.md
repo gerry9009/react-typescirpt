@@ -1,46 +1,93 @@
-# Getting Started with Create React App
+#
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+:point_right: [Youtube playlist](https://www.youtube.com/watch?v=TiSGujM22OI&list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK&ab_channel=Codevolution)
 
-## Available Scripts
+# 1 Basic Props Types
 
-In the project directory, you can run:
+- Use the `type` keyword to define a type. The `type` must be written with a capital first letter
 
-### `npm start`
+- `Basic types`
+  > type GreetProps = {
+  > name: string;
+  > messageCount: number;
+  > isLogged: boolean;
+  > };
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> const Greet = ({ name, messageCount, isLogged }: GreetProps) => { ... }
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`OR`
 
-### `npm test`
+> const Greet = (props: GreetProps) => { ... }
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `Object`
 
-### `npm run build`
+  > type PersonProps = {
+  > name: {
+  > first: string;
+  > last: string;
+  > };
+  > };
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `Array`
+  > type PersonListProps = {
+  > names: {
+  > first: string;
+  > last: string;
+  > }[];
+  > };
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 2 Advanced Props Types
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `union type` of string literals
+- Add special type to an element of the `Status.tsx` component
+- The if-else statement has three branches
+- if we accept any string as prop, we should not notice the problem
+- instead, we add special values as types
 
-### `npm run eject`
+> type StatusProps = {
+> status: "loading" | "success" | "error";
+> };
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Add `children props`
+- Add a react component as a children to another react component -> React Types Package
+- `Oscar.tsx` and `Heading.tsx`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  > children: React.ReactNode;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `Optional type` -> use ? /question mark/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# 3 Event Props
 
-## Learn More
+# 4 Style Props
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 5 UseState Hook
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 6 UseState Future Value
+
+# 7 UseState Type Assertion
+
+# 8 UseReducer Hook
+
+# 9 UseReducer Strict Action Types
+
+# 10 UseContext Hook
+
+# 11 UseContext Future Value
+
+# 12 UseRef Hook
+
+# 13 Class Component
+
+# 14 Component Prop
+
+# 15 Generic Props
+
+# 16 Restricting Props
+
+# 17 Template Literals and Exclude
+
+# 18 Wrapping HTML Elements
+
+# 19 Extracting a Components Props Types
+
+# 20 Polymorphic Components
