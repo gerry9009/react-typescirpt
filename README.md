@@ -7,13 +7,14 @@
 - Use the `type` keyword to define a type. The `type` must be written with a capital first letter
 
 - `Basic types`
+
   > type GreetProps = {
   > name: string;
   > messageCount: number;
   > isLogged: boolean;
   > };
 
-> const Greet = ({ name, messageCount, isLogged }: GreetProps) => { ... }
+  > const Greet = ({ name, messageCount, isLogged }: GreetProps) => { ... }
 
 `OR`
 
@@ -58,7 +59,27 @@
 
 # 3 Event Props
 
+-`Click event` a button -> `Button.tsx`
+
+> event: React.MouseEvent<Element, MouseEvent>
+
+-`Change event` input element -> `Input.tsx`
+
+> event: React.ChangeEvent<Element>
+
 # 4 Style Props
+
+-Add style as a props to a component -> `Container.tsx`
+
+> styles: React.CSSProperties | undefined;
+
+# Props suggestion
+
+- destruct the props
+- exporting types => `Person.types.ts` -> export type and import type into the component `Person.tsx`
+
+- Extract a type and use it in multiple places
+  -> extract the name type in the `Person.types.ts` and export it and used in the `PersonList.tsx`
 
 # 5 UseState Hook
 
